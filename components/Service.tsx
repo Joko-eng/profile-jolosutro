@@ -3,7 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 
-export default function ProductGrid() {
+export default function Service() {
   const serviceList = [
     {
       nama: "Ganti LCD",

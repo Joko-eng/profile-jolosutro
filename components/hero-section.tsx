@@ -1,102 +1,121 @@
-import React from 'react'
-import { Mail, SendHorizonal } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { TextEffect } from '@/components/ui/text-effect'
-import { AnimatedGroup } from '@/components/ui/animated-group'
-import { HeroHeader } from './header'
-import Link from 'next/link'
-import { FaWhatsapp } from "react-icons/fa"
-import ShinyText from '@/ShinyText/ShinyText'
+'use client';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { TextEffect } from "@/components/ui/text-effect";
+import { AnimatedGroup } from "@/components/ui/animated-group";
+import { HeroHeader } from "./header";
+import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const transitionVariants = {
-    item: {
-        hidden: {
-            opacity: 0,
-            filter: 'blur(12px)',
-            y: 12,
-        },
-        visible: {
-            opacity: 1,
-            filter: 'blur(0px)',
-            y: 0,
-            transition: {
-                type: 'spring' as const,
-                bounce: 0.3,
-                duration: 1.5,
-            },
-        },
+  item: {
+    hidden: {
+      opacity: 0,
+      filter: "blur(12px)",
+      y: 12,
     },
-}
+    visible: {
+      opacity: 1,
+      filter: "blur(0px)",
+      y: 0,
+      transition: {
+        type: "spring" as const,
+        bounce: 0.3,
+        duration: 1.5,
+      },
+    },
+  },
+};
 
 export default function HeroSection() {
-    return (
-        <>
-            <HeroHeader />
+    const handleScroll = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const offset = 80; // tinggi navbar
+      const top = section.offsetTop - offset;
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
+    }
+    };
+  return (
+    <>
+      <HeroHeader />
 
-            <main className="overflow-hidden [--color-primary-foreground:var(--color-white)] [--color-primary:var(--color-green-600)]">
-                <section>
-                    <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 lg:pt-30">
-                        <div className="relative z-10 mx-auto max-w-4xl text-center">
-                            <TextEffect
-                                preset="fade-in-blur"
-                                speedSegment={0.3}
-                                as="h1"
-                                className="text-balance text-5xl font-medium md:text-6xl">
-                                Jolosutro Project
-                            </TextEffect>
-                             
-                            <TextEffect
-                                per="line"
-                                preset="fade-in-blur"
-                                speedSegment={0.3}
-                                delay={0.5}
-                                as="p"
-                                className="mx-auto mt-6 max-w-2xl text-pretty text-lg">
-                                Jolosutro Project adalah layanan servis handphone terpercaya yang mengutamakan kualitas, kecepatan, dan kepuasan pelanggan. 
-                                Kami melayani berbagai jenis perbaikan mulai dari kerusakan ringan hingga berat seperti layar pecah, baterai drop, tombol tidak berfungsi, hingga masalah software.
-                            </TextEffect>
+      <main className="overflow-hidden [--color-primary-foreground:var(--color-white)] [--color-primary:var(--color-green-600)]">
+        <section>
+          <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 lg:pt-30">
+            <div className="relative z-10 mx-auto max-w-4xl text-center">
+              <TextEffect
+                preset="fade-in-blur"
+                speedSegment={0.3}
+                as="h1"
+                className="text-balance text-5xl font-medium md:text-6xl"
+              >
+                Jolosutro Project
+              </TextEffect>
 
-                            <AnimatedGroup
-                                variants={{
-                                    container: {
-                                        visible: {
-                                            transition: {
-                                                staggerChildren: 0.05,
-                                                delayChildren: 0.75,
-                                            },
-                                        },
-                                    },
-                                    ...transitionVariants,
-                                }}
-                                className="mt-12">
-                                <div className="mt-12 flex flex-wrap justify-center gap-4">
-                        <Button
-                            asChild
-                            size="lg">
-                            <Link href="https://wa.me/6285141682291" target="_blank">
-                                <span>Hubungi Kami</span>
-                             <FaWhatsapp/>
-                            </Link>
-                            
-                        </Button>
+              <TextEffect
+                per="line"
+                preset="fade-in-blur"
+                speedSegment={0.3}
+                delay={0.5}
+                as="p"
+                className="mx-auto mt-6 max-w-2xl text-pretty text-lg"
+              >
+                Jolosutro Project adalah layanan servis handphone terpercaya
+                yang mengutamakan kualitas, kecepatan, dan kepuasan pelanggan.
+                Kami melayani berbagai jenis perbaikan mulai dari kerusakan
+                ringan hingga berat seperti layar pecah, baterai drop, tombol
+                tidak berfungsi, hingga masalah software.
+              </TextEffect>
 
-                        <Button
-                            asChild
-                            size="lg"
-                            variant="outline">
-                            <Link href="/">
-                                <span>Layanan</span>
-                            </Link>
-                        </Button>
-                    </div>
-                            </AnimatedGroup>
-                        </div>
-                    </div>
-                </section>
-                {/* <LogoCloud /> */}
-            </main>
-        </>
-    )
+              <AnimatedGroup
+                variants={{
+                  container: {
+                    visible: {
+                      transition: {
+                        staggerChildren: 0.05,
+                        delayChildren: 0.75,
+                      },
+                    },
+                  },
+                  ...transitionVariants,
+                }}
+                className="mt-12"
+              >
+                <div className="mt-12 flex flex-wrap justify-center gap-4">
+                  <Button asChild size="lg">
+                    <Link href="https://wa.me/6285141682291" target="_blank">
+                      <span>Hubungi Kami</span>
+                      <FaWhatsapp />
+                    </Link>
+                  </Button>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      onClick={() => handleScroll("service")}
+                    >
+                      <span>Layanan</span>
+                    </Button>
+                  </motion.div>
+                </div>
+              </AnimatedGroup>
+            </div>
+          </div>
+        </section>
+        {/* <LogoCloud /> */}
+      </main>
+    </>
+  );
 }
 
 // const AppComponent = () => {

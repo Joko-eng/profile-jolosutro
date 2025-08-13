@@ -1,11 +1,16 @@
 import HeroSection from "@/components/hero-section";
-import MostProducts from "@/components/Product";
+import MostProducts from "@/components/Service";
 
 export default function Home() {
   return (
-    <main className="">
-      <HeroSection />
-      <MostProducts />
-    </main>
+   <div className="scroll-smooth">
+      <section id="home">
+        <HeroSection />
+      </section>
+
+      <section id="service">
+        <MostProducts />
+      </section>
+    </div>
   );
 }
