@@ -43,7 +43,7 @@ export default function HeroSection() {
                 {/* Button WhatsApp */}
                 <Button
                   asChild
-                  className="bg-blue-600 hover:bg-blue-700 text-white"
+                  className="bg-blue-500 hover:bg-blue-700 text-white"
                 >
                   <a
                     href="https://wa.me/6285141682291"   

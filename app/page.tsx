@@ -1,4 +1,6 @@
+import AboutPage from "@/components/about";
 import { AccordionDemo } from "@/components/Accordion";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/hero-section";
 import MostProducts from "@/components/Service";
 
@@ -15,6 +17,8 @@ export default function Home() {
       <section id="">
         <AccordionDemo />
       </section>
+      <AboutPage />
+      <Footer />
     </div>
   );
 }
