@@ -10,7 +10,7 @@ export default function Service() {
   const serviceList = [
     {
       nama: "Ganti LCD",
-      harga: "Mulai Rp 350.000",
+      harga: "Mulai Rp 250.000",
       deskripsi: "Perbaikan layar pecah atau bergaris dengan LCD Standard Dan Original.",
       gambar: "/lcd.jpg",
     },
@@ -28,7 +28,7 @@ export default function Service() {
     },
     {
       nama: "Ganti EMMC",
-      harga: "Mulai Rp 500.000",
+      harga: "Mulai Rp 250.000",
       deskripsi: "Mengganti IC EMMC untuk mengatasi bootloop atau memori rusak.",
       gambar: "/mmc.jpg",
     },
