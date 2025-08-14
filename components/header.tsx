@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 import React from "react";
 
 const menuItems = [
-  { name: "Home", targetId: "home" },
-  { name: "Service", targetId: "service" },
-  { name: "About", targetId: "link" },
+  { name: "Beranda", targetId: "home" },
+  { name: "Layanan", targetId: "service" },
+  { name: "Tentang Kami", targetId: "link" },
 ];
 
 export const HeroHeader = () => {

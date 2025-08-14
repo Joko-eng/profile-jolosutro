@@ -11,7 +11,7 @@ export default function Service() {
     {
       nama: "Ganti LCD",
       harga: "Mulai Rp 350.000",
-      deskripsi: "Perbaikan layar pecah atau bergaris dengan LCD original.",
+      deskripsi: "Perbaikan layar pecah atau bergaris dengan LCD Standard Dan Original.",
       gambar: "/lcd.jpg",
     },
     {
@@ -75,10 +75,10 @@ export default function Service() {
                   {/* Tombol Booking */}
                   <Button
                     asChild
-                    className="mt-3 bg-green-500 hover:bg-green-600 text-white w-full"
+                    className="mt-3 bg-blue-500 hover:bg-blue-600 text-white w-full"
                   >
                     <a href={linkWA} target="_blank" rel="noopener noreferrer">
-                      Booking Now
+                      Pesan Sekarang
                     </a>
                   </Button>
                 </CardContent>
