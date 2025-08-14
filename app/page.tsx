@@ -1,3 +1,4 @@
+import { AccordionDemo } from "@/components/Accordion";
 import HeroSection from "@/components/hero-section";
 import MostProducts from "@/components/Service";
 
@@ -10,6 +11,9 @@ export default function Home() {
 
       <section id="service">
         <MostProducts />
+      </section>
+      <section id="">
+        <AccordionDemo />
       </section>
     </div>
   );

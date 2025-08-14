@@ -2,7 +2,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { TextEffect } from "@/components/ui/text-effect";
-import { AnimatedGroup } from "@/components/ui/animated-group";
 import { HeroHeader } from "./header";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
@@ -72,43 +71,7 @@ export default function HeroSection() {
                 tidak berfungsi, hingga masalah software.
               </TextEffect>
 
-              <AnimatedGroup
-                variants={{
-                  container: {
-                    visible: {
-                      transition: {
-                        staggerChildren: 0.05,
-                        delayChildren: 0.75,
-                      },
-                    },
-                  },
-                  ...transitionVariants,
-                }}
-                className="mt-12"
-              >
-                <div className="mt-12 flex flex-wrap justify-center gap-4">
-                  <Button asChild size="lg">
-                    <Link href="https://wa.me/6285141682291" target="_blank">
-                      <span>Hubungi Kami</span>
-                      <FaWhatsapp />
-                    </Link>
-                  </Button>
-
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      onClick={() => handleScroll("service")}
-                    >
-                      <span>Layanan</span>
-                    </Button>
-                  </motion.div>
-                </div>
-              </AnimatedGroup>
+              
             </div>
           </div>
         </section>
