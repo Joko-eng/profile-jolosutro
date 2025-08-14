@@ -78,7 +78,7 @@ export default function Service() {
                     className="mt-3 bg-blue-500 hover:bg-blue-600 text-white w-full"
                   >
                     <a href={linkWA} target="_blank" rel="noopener noreferrer">
-                      Pesan Sekarang
+                      Hubungi Sekarang
                     </a>
                   </Button>
                 </CardContent>
