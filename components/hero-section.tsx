@@ -46,7 +46,7 @@ export default function HeroSection() {
                   className="bg-blue-600 hover:bg-blue-700 text-white"
                 >
                   <a
-                    href="https://wa.me/628123456789"   
+                    href="https://wa.me/6285141682291"   
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2"
